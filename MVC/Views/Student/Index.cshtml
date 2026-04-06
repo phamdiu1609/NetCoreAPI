@@ -2,13 +2,38 @@
 
 <h2>Nhập thông tin sinh viên</h2>
 
-<form method="post">
-    <input type="text" asp-for="StudentCode" placeholder="Mã sinh viên" /><br />
-    <input type="text" asp-for="FullName" placeholder="Họ tên" /><br />
+<form asp-action="Index" method="post">
+
+    <div>
+        <label>Mã SV</label>
+        <input asp-for="StudentCode" />
+        <span asp-validation-for="StudentCode" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Họ tên</label>
+        <input asp-for="FullName" />
+        <span asp-validation-for="FullName" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Tuổi</label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" style="color:red"></span>
+    </div>
+
     <button type="submit">Gửi</button>
+
 </form>
 
-@if (ViewBag.Message != null)
-{
-    <p style="color: blue;">@ViewBag.Message</p>
+<p>@ViewBag.Message</p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }

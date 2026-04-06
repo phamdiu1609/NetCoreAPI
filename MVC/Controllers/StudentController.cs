@@ -14,8 +14,33 @@ namespace MVC.Controllers
         [HttpPost]
         public IActionResult Index(Student student)
         {
-            ViewBag.Message = $"Xin chào {student.FullName} - Mã SV: {student.StudentCode}";
+            if (ModelState.IsValid)
+            {
+                ViewBag.Message = $"Xin chào {student.FullName} - Mã SV: {student.StudentCode}";
+            }
+            else
+            {
+                ViewBag.Message = "Dữ liệu không hợp lệ!";
+            }
+
             return View(student);
+        }
+
+        // Trang NotFound
+        public IActionResult NotFoundPage()
+        {
+            return View("NotFound");
+        }
+
+        // Ví dụ kiểm tra dữ liệu
+        public IActionResult Details(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return RedirectToAction("NotFoundPage");
+            }
+
+            return View();
         }
     }
 }
