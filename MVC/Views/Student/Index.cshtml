@@ -1,0 +1,14 @@
+@model MVC.Models.Student
+
+<h2>Nhập thông tin sinh viên</h2>
+
+<form method="post">
+    <input type="text" asp-for="StudentCode" placeholder="Mã sinh viên" /><br />
+    <input type="text" asp-for="FullName" placeholder="Họ tên" /><br />
+    <button type="submit">Gửi</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: blue;">@ViewBag.Message</p>
+}

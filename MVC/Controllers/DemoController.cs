@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design;
 using System.Text.Encodings.Web;
-namespace MvcMovie.Controllers
+namespace MVC.Controllers
 {
     public class DemoController : Controller
     { 
