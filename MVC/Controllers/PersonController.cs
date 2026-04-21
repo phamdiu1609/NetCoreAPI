@@ -14,17 +14,19 @@ namespace MVC.Controllers
             _context = context;
         }
 
+        // GET: Person
         public async Task<IActionResult> Index()
         {
-            var model = await _context.Person.ToListAsync();
-            return View(model);
+            return View(await _context.Person.ToListAsync());
         }
 
+        // GET: Person/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Person/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PersonId,FullName,Address")] Person person)
@@ -38,9 +40,10 @@ namespace MVC.Controllers
             return View(person);
         }
 
+        // GET: Person/Edit
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -53,6 +56,7 @@ namespace MVC.Controllers
             return View(person);
         }
 
+        // POST: Person/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address")] Person person)
@@ -85,6 +89,7 @@ namespace MVC.Controllers
             return View(person);
         }
 
+        // GET: Person/Delete
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -103,14 +108,11 @@ namespace MVC.Controllers
             return View(person);
         }
 
+        // POST: Person/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Person == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Person' is null.");
-            }
             var person = await _context.Person.FindAsync(id);
             if (person != null)
             {
@@ -123,7 +125,7 @@ namespace MVC.Controllers
 
         private bool PersonExists(string id)
         {
-            return (_context.Person?.Any(e => e.PersonId == id)).GetValueOrDefault();
+            return _context.Person.Any(e => e.PersonId == id);
         }
     }
 }
