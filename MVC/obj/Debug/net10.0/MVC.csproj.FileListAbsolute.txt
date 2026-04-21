@@ -365,3 +365,11 @@ C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\obj\Debug\net10.0\refint\MVC.dll
 C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\obj\Debug\net10.0\MVC.pdb
 C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\obj\Debug\net10.0\MVC.genruntimeconfig.cache
 C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\obj\Debug\net10.0\ref\MVC.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\EPPlus.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\System.Drawing.Common.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\System.Xml.XPath.XmlDocument.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Quang Nghi\Documents\Net_Core_API\MVC\bin\Debug\net10.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

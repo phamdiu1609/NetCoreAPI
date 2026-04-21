@@ -14,6 +14,7 @@ namespace MVC.Data
         public DbSet<SanPham> SanPhams { get; set; }
         public DbSet<DonHang> DonHangs { get; set; }
         public DbSet<ChiTietDonHang> ChiTietDonHangs { get; set; }
+        public DbSet<Student> Students { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,5 +38,6 @@ namespace MVC.Data
                 .HasForeignKey(ct => ct.SanPhamId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
+        public DbSet<MVC.Models.Student> Student { get; set; } = default!;
     }
 }

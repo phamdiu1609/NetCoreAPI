@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "MVC/1.0.0": {
         "dependencies": {
+          "EPPlus": "5.8.0",
           "Microsoft.EntityFrameworkCore.Design": "10.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.5",
@@ -40,6 +41,19 @@
           "lib/net8.0/Azure.Identity.dll": {
             "assemblyVersion": "1.14.2.0",
             "fileVersion": "1.1400.225.36004"
+          }
+        }
+      },
+      "EPPlus/5.8.0": {
+        "dependencies": {
+          "Microsoft.IO.RecyclableMemoryStream": "1.4.1",
+          "System.Drawing.Common": "5.0.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/net5.0/EPPlus.dll": {
+            "assemblyVersion": "5.8.0.0",
+            "fileVersion": "5.8.0.0"
           }
         }
       },
@@ -1411,6 +1425,14 @@
           }
         }
       },
+      "Microsoft.IO.RecyclableMemoryStream/1.4.1": {
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.IO.RecyclableMemoryStream.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.4.1.0"
+          }
+        }
+      },
       "Microsoft.NET.StringTools/17.11.48": {
         "runtime": {
           "lib/net8.0/Microsoft.NET.StringTools.dll": {
@@ -1634,6 +1656,22 @@
           "lib/net10.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
             "assemblyVersion": "10.0.2.0",
             "fileVersion": "10.0.226.5601"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
           }
         }
       },
@@ -1995,6 +2033,31 @@
           }
         }
       },
+      "System.Drawing.Common/5.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/7.7.1": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "7.7.1",
@@ -2030,6 +2093,14 @@
             "fileVersion": "9.0.625.26613"
           }
         }
+      },
+      "System.Xml.XPath.XmlDocument/4.3.0": {
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
       }
     }
   },
@@ -2052,6 +2123,13 @@
       "sha512": "sha512-YhNMwOTwT+I2wIcJKSdP0ADyB2aK+JaYWZxO8LSRDm5w77LFr0ykR9xmt2ZV5T1gaI7xU6iNFIh/yW1dAlpddQ==",
       "path": "azure.identity/1.14.2",
       "hashPath": "azure.identity.1.14.2.nupkg.sha512"
+    },
+    "EPPlus/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a+n1oEjW+nZ92feC8tPDUYsuwNL+9Zx+IGKkvbiygkDWB9JBtAU0P84gJnSiP50TjO+DbUAwrzGybjYdsNDEiA==",
+      "path": "epplus/5.8.0",
+      "hashPath": "epplus.5.8.0.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",
@@ -2655,6 +2733,13 @@
       "path": "microsoft.identitymodel.tokens/7.7.1",
       "hashPath": "microsoft.identitymodel.tokens.7.7.1.nupkg.sha512"
     },
+    "Microsoft.IO.RecyclableMemoryStream/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6A0fyZkxoUUj1dpXzLAWwI89YmKZ+ZSp1DCg+gN6llcXJwfYo1IIQZoCkuo6T7vUxw/w1CSk/Pl04NQ4fno+DQ==",
+      "path": "microsoft.io.recyclablememorystream/1.4.1",
+      "hashPath": "microsoft.io.recyclablememorystream.1.4.1.nupkg.sha512"
+    },
     "Microsoft.NET.StringTools/17.11.48": {
       "type": "package",
       "serviceable": true,
@@ -2724,6 +2809,13 @@
       "sha512": "sha512-JQcdTUracjvpN2zzHLhpGuqWqeZJzV08q0us960GRi4EN+3H8/CvE4D6+PzS+mD2eapf6i4DjPQljg9oi+R0+A==",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/10.0.2",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.10.0.2.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
+      "path": "microsoft.win32.systemevents/5.0.0",
+      "hashPath": "microsoft.win32.systemevents.5.0.0.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",
@@ -2893,6 +2985,13 @@
       "path": "system.configuration.configurationmanager/9.0.4",
       "hashPath": "system.configuration.configurationmanager.9.0.4.nupkg.sha512"
     },
+    "System.Drawing.Common/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SztFwAnpfKC8+sEKXAFxCBWhKQaEd97EiOL7oZJZP56zbqnLpmxACWA8aGseaUExciuEAUuR9dY8f7HkTRAdnw==",
+      "path": "system.drawing.common/5.0.0",
+      "hashPath": "system.drawing.common.5.0.0.nupkg.sha512"
+    },
     "System.IdentityModel.Tokens.Jwt/7.7.1": {
       "type": "package",
       "serviceable": true,
@@ -2920,6 +3019,13 @@
       "sha512": "sha512-yErfw/3pZkJE/VKza/Cm5idTpIKOy/vsmVi59Ta5SruPVtubzxb8CtnE8tyUpzs5pr0Y28GUFfSVzAhCLN3F/Q==",
       "path": "system.security.cryptography.protecteddata/9.0.6",
       "hashPath": "system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
+    },
+    "System.Xml.XPath.XmlDocument/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
+      "path": "system.xml.xpath.xmldocument/4.3.0",
+      "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     }
   }
 }
